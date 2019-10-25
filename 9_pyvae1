@@ -1,0 +1,7 @@
+def ordem(lista):
+    m = []
+    mini = []
+    m.append(max(lista))
+    mini.append(min(lista))
+
+    return (f"Valor maximo é o {m}, o valor minimo é o {mini}")
