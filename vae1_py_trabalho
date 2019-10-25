@@ -1,0 +1,30 @@
+"""Faça uma função que dado o mês(número) e o hemisfério retorna uma estação do ano. Por
+exemplo: estacao(2, ‘norte’) retorna inverno. Suponha que toda estação inicia no primeiro dia
+do mês e termina no final de um mês, após 3 meses."""
+
+hem = int(input("Digite o hemisferio , (1- para sul) , (2- para norte):"))
+numero = int(input("Digite o número do mes:"))
+
+if hem == 1:
+    if numero == 12 or numero == 1 or numero == 2:
+        print("É verão:")
+    elif numero >= 3 and numero < 6:
+        print("É outono:")
+    elif numero >= 6 and numero < 9:
+        print('É inverno:')
+    elif numero >= 9 and numero < 12:
+        print(" É primavera:")
+    else:
+        print("Mes inválido:")
+elif hem == 2:
+    if numero == 12 or numero == 1 or numero == 2:
+        print("É inverno")
+    elif numero >= 3 and numero < 6:
+        print("É primaveira")
+    elif numero >= 6 and numero < 9:
+        print("É verão")
+    elif numero >= 9 and numero < 12:
+        print("É outono")
+    else:
+        print("Mes invalido")
+
