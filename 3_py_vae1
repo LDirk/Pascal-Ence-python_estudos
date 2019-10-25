@@ -1,0 +1,16 @@
+b1 = str(input("Digite um binário:"))
+b2 = str(input("Digite o segundo binario:"))
+
+c = b1+ b2
+
+
+if c == '00':
+    print('False')
+elif c == '01':
+    print('True')
+elif c == '10':
+    print("False")
+elif c == '11':
+    print('True')
+else:
+    print("Voce não digitou um binario válido")
