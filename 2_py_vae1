@@ -1,0 +1,16 @@
+i = float(input("Digite a idade:"))
+
+if i>0 and i<2:
+    print("Bebê")
+elif i>=2 and i<13:
+    print("Criança")
+elif i>=13 and i<=19:
+    print("Adolescente")
+elif i>=20 and i<= 60:
+    print("Adulto")
+elif i>60 and i<=80:
+    print("Idoso")
+elif i>80:
+    print("Longevo")
+else:
+    print("Idade inválida")
