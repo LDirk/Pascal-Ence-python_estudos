@@ -1,0 +1,35 @@
+def bi(a,b,op):
+    c = a + b
+    r = []
+
+    if op == "OR":
+        if c == '00':
+            r.append('False')
+        elif c == '01':
+            r.append('True')
+        elif c == '10':
+            r.append('True')
+        elif c == '11':
+            r.append('True')
+        else:
+            r.append("Voce não digitou um binario válido")
+
+    if op == "NOR":
+        if c == '00':
+            r.append('True')
+        elif c == '01':
+            r.append('False')
+        elif c == '10':
+            r.append('False')
+        elif c == '11':
+            r.append('False')
+        else:
+            r.append("Voce não digitou um binario válido")
+
+    return r
+
+x = str (input("Digite o binário a:"))
+y = str (input("Digite o binario b:"))
+z = str(input("Digite a operação, (OR) ou (NOR):"))
+
+print(bi(x,y,z))
