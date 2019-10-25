@@ -1,0 +1,38 @@
+import random
+
+print("1 é pedra, 2 é  papel e 3 é tesoura:")
+print("--"*20)
+a = str(input('Qual voce escolhe: '))
+
+if a == '1':
+    x = random.randrange(1,4)
+    if x == 2:
+        print('Voce escolheu pedra')
+        print('O computador escolheu papel, voce perdeu')
+    elif x == 3:
+        print('Voce escolheu pedra')
+        print('O computador escolheu tesoura, voce ganhou')
+    else:
+        print("Empatou")
+
+if a == '2':
+    x = random.randrange(1, 4)
+    if x == 3:
+        print('Voce escolheu papel')
+        print('O computador escolheu Tesoura, voce perdeu')
+    elif x == 1:
+        print('Voce escolheu papel')
+        print('O computador escolheu pedra, voce ganhou')
+    else:
+        print('Empatou')
+
+if a == '3':
+    x = random.randrange(1,4)
+    if x == 1:
+        print('Voce escolheu Tesoura')
+        print("O computador escolheu pedra, voce perdeu")
+    if x == 2:
+        print('Voce escolheu Tesoura')
+        print('O computador escolheu papel, voce ganhou')
+    else :
+        print('empatou')
