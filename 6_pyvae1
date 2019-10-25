@@ -1,0 +1,18 @@
+def ordem(a,b,c):
+
+    lista = []
+    lista.append(a)
+    lista.append(b)
+    lista.append(c)
+
+    lista.sort()
+
+    return lista
+
+print("Digite 3 inteiros distintos")
+print('---'*10)
+x = int(input("int 1: "))
+y = int(input("int 2: "))
+z = int(input("int 3: "))
+
+print(ordem(x,y,z))
