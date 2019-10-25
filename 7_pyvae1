@@ -1,0 +1,22 @@
+def tri(a,b,c):
+
+    lista = []
+    if a+b>c and a+c>b and c+b>a:
+        if a == b and a == c and b == c :
+            lista.append("Equilátero")
+        elif a != b and a != c and c != b :
+            lista.append('Escaleno')
+        else :
+            lista.append('Equilátero')
+    else :
+        lista.append('Os lados não formam um triangulo')
+
+    return lista
+
+print("Digite 3 lados do triangulo")
+print('---'*10)
+x = float(input("lado 1: "))
+y = float(input("lado 2: "))
+z = float(input("lado 3: "))
+
+print(tri(x,y,z))
