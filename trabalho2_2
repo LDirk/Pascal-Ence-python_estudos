@@ -1,0 +1,9 @@
+#2. Faça um programa que fica solicitando um número ao usuário e o exiba. O programa deve
+#ficar executando enquanto o usuário não digitar ‘sair’.
+
+print('Digite um número ou sair para sair')
+numero = 123
+
+while numero != 'sair':
+    numero = str(input('Digite o numero , ou sair:'))
+    print(numero)
