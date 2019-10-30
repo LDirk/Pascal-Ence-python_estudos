@@ -1,0 +1,11 @@
+ #Faça uma função que dada uma string, exiba apenas os caracteres presentes em um índice  par
+ 
+palavra = str(input("Digite a palavra:"))
+contador = 0
+
+while contador*2<= len(palavra):
+    print(palavra[contador*2])
+    print(f'Indice {contador*2}')
+    print()
+    contador = contador + 1
+          
