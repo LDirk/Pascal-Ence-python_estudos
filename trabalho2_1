@@ -1,0 +1,4 @@
+n = int(input("Digite um inteiro:"))
+palavra = str(input("Digite uma palavra:"))
+
+print(n*palavra)
