@@ -1,0 +1,42 @@
+# entrando com dados
+salario_min = 0
+add_salario = 0
+add_filhos = 0
+salario = []
+numero_filhos = []
+contador = 1
+
+print('-'*5 + "O programa se encerra com um salário negativo" + '-'*5)
+
+while add_salario >=0 :
+    add_salario = float(input(f"Digite o salario da {contador} pessoa:"))
+    salario.append(add_salario)
+
+    if add_salario<0:
+        salario.remove(add_salario)
+        break
+    if add_salario == 998:
+        salario_min = salario_min + 1
+
+    add_filhos = float(input(f"Digite o numeros de filhos da {contador} pessoa: "))
+
+    if add_salario >0:
+        numero_filhos.append(add_filhos)
+
+    contador = contador + 1
+
+print(numero_filhos)
+
+#media salarial.
+media_salario = sum(salario)/len(salario)
+print(f' A média salarial é :{media_salario} Reais')
+
+# media do numero de filhos.
+media_filhos = sum(numero_filhos)/len(numero_filhos)
+print(f'A media do numero de filhos é: {media_filhos}')
+
+# maior salario.
+print(f"O maior sálario entre os {contador-1} habitantes é: {max(salario)}")
+
+# percentual de pessoas com salario minimo, supondo que seja exatos 998 reais
+print(f'O percentual de pessoas que recebem salario minimo é de: {salario_min/len(salario)}')
