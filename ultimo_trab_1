@@ -1,0 +1,10 @@
+#Dado um número N, calcule a soma dos quadrados de 1 até N.
+
+N = int(input("Digite o valor de N: "))
+lista = []
+
+for numero in range (1,N+1,1):
+    lista.append(numero*numero)
+    
+print(f"A soma dos quadrados de 1 até N é {sum(lista)}")
+    
