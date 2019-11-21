@@ -1,0 +1,23 @@
+#A sequência de Fibonacci é uma sucessão de números que, misteriosamente, aparece em
+#muitos fenômenos da natureza. Ela é infinita e começa com 0 e 1. Os números seguintes são
+#sempre a soma dos dois números anteriores. Portanto, depois de 0 e 1, vêm 1, 2, 3, 5, 8, 13, 21,
+#…. Faça um programa que dado o tamanho da sequencia, exiba todos os números.
+        
+N = int(input("Digite o tamanho da sequência de Fibonacci: "))
+
+if N == 1:
+    lista = [0]
+
+elif N == 2: 
+    lista = [0,1]
+
+elif N >= 3:
+    lista = [0,1]
+       
+    contador = 2
+    while contador<N:   
+        lista.append(lista[contador-2]+lista[contador-1])
+        contador = contador + 1
+
+print(lista)
+
