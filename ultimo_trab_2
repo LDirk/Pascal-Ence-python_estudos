@@ -1,0 +1,19 @@
+#Faça uma função que dada uma lista qualquer com 10 números inteiros, coloque e exiba os
+#números em ordem crescente. OBS: Não use a função/método sort
+
+def ordem(lista):
+    
+    lista_ordenada = []
+    
+    for i in range(0,10,1):
+    
+        # adicionando o menor elemento da lista na nova lista.
+        lista_ordenada.append(min(lista))
+    
+        # removendo o menor elemento da lista 
+        lista.remove(min(lista))
+    
+    return lista_ordenada
+
+print(ordem([1,1,2,3,4,5,6,7,8,9]))
+        
