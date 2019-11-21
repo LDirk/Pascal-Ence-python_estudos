@@ -1,0 +1,18 @@
+def geradora(matriz):
+    print("A original é: ")
+    
+    for linha in range(0,len(matriz)):
+        for coluna in range(0,len(matriz[0])):
+            print (f'[{matriz[linha][coluna]:^5}]', end ='' )
+        print()
+        
+    print()       
+    print("A transposta é: ")
+    for linha in range(0,len(matriz[0])):
+        for coluna in range(0,len(matriz)):
+            print (f'[{matriz[coluna][linha]:^5}]', end ='' )
+        print()
+    
+geradora([[1,3,5,7],[2,4,2,1],[5,5,5,66],[3,8,8,9]])
+
+
