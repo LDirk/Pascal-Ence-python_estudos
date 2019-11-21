@@ -1,0 +1,27 @@
+"""4. A função interna ord() do python retorna um número inteiro que representa o
+código unicode para o caractere especificado.
+Por exemplo: ord('a') = 97, ord(‘b') = 98,..., ord('z') = 122.
+Já a função interna chr() retorna um caractere (string) de um número inteiro que
+representa o código unicode do caractere.
+Por exemplo: chr(97) = ‘a’,chr(98) = ‘b’, ..., chr(122) = z.
+Usando essas operações, faça uma função que rotacione uma string dada baseada em um valor.
+Por exemplo: rotacionar(‘nome’, 1) retorna opnf; rotacionar(‘nome’, 2) retorna 'pqog'"""
+
+
+def rotacionar_string(palavra,pulo):
+    
+    contador = 0
+    lista = []
+    
+    while contador < len(palavra):
+        lista.append(chr(ord(palavra[contador]) + pulo))
+        contador = contador + 1 
+       
+        rotacionado = str(lista).strip('[]')
+       
+        
+    return rotacionado
+
+
+print(rotacionar_string('Nome',2))
+    
