@@ -1,0 +1,19 @@
+"""Faça um programa que o usuário informe o nome e data de nascimento e tal informação seja
+armazenada em um arquivo para posterior recuperação dessas informações. O programa fica
+em um loop solicitando as informações e termina quando o usuário digita ‘__sair__’."""
+
+# arquivo é criado na mesma pasta onde está salvado este seu programa.
+
+arquivo = open('questao9.txt','w')
+sair = ''
+
+while sair != "__sair__":
+    nome = str(input("Digite seu nome:"))
+    data = str(input("Digite sua data de nascimento, dia/mes/ano:"))
+    arquivo.write(nome)
+    arquivo.write('-- nasceu em --')
+    arquivo.write(data)
+    arquivo.write('\n')
+    sair = str(input("Digite __sair__ para sair:"))
+
+arquivo.close()
