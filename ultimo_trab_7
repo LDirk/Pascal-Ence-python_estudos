@@ -1,0 +1,51 @@
+import statistics
+
+def media(lista):
+    return sum(lista)/len(lista)
+
+def var(lista):
+    
+    variancia = 0
+    contador = 0
+    
+    while contador < len(lista):
+        
+        x = ((lista[contador] - media(lista))**2)/len(lista)
+        variancia = x + variancia
+        
+        contador = contador + 1
+                
+    return variancia 
+
+def desvp(lista):
+    return (var(lista))**(1/2)
+
+
+def mediana(lista):
+    
+    lista.sort()
+    
+    if len(lista) % 2 == 0:
+        x = int(len(lista)/2)
+        
+        
+        k = ((lista[int(len(lista)/2)] + lista [int(len(lista)/2 - 1 )])/2)
+        
+    else : 
+        
+        k = ((lista[int((len(lista)+1)/2 - 1)]))
+        
+    return k        
+      
+def moda(lista):
+    return statistics.mode(lista)
+   
+       
+print(media([5, 15, 20, 30, 40, 50]))    
+print(var([5, 15, 20, 30, 40, 50]))    
+print(desvp([5, 15, 20, 30, 40, 50]))
+print(mediana([5, 15, 20, 30, 40,50]))
+print(moda([1,2,2,2,3,4,5,6,7,8,9,2]))
+    
+    
+    
