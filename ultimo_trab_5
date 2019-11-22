@@ -1,0 +1,92 @@
+ """Faça um programa que preencha com valores aleatórios entre 1 e 100 um vetor de 3
+dimensões de tamanho 10, ou seja, 10 x 10 x 10. Logo após, exibir todos os elementos que
+receberam o maior valor aleatório e todos elementos que receberam o menor valor aleatório.
+Dica: importe o módulo random e use a função randint(int_a, int_b) do módulo random."""
+    
+from random import randint 
+
+
+
+vetor1 = [[],[],[],[],[],[],[],[],[],[]]
+vetor2 = [[],[],[],[],[],[],[],[],[],[]]
+vetor3 = [[],[],[],[],[],[],[],[],[],[]]
+vetor4 = [[],[],[],[],[],[],[],[],[],[]]
+vetor5 = [[],[],[],[],[],[],[],[],[],[]]
+vetor6 = [[],[],[],[],[],[],[],[],[],[]]
+vetor7 = [[],[],[],[],[],[],[],[],[],[]]
+vetor8 = [[],[],[],[],[],[],[],[],[],[]]
+vetor9 = [[],[],[],[],[],[],[],[],[],[]]
+vetor10 = [[],[],[],[],[],[],[],[],[],[]]
+    
+vetor = [vetor1,vetor2,vetor3,vetor4,vetor5,vetor6,vetor7,vetor8,vetor9,vetor10]
+    
+lista_max = []
+lista_min = []
+     
+for numero in range(0,10):
+    for contador in range(0,10):
+        
+        vetor1[contador].append(randint(1,100))       
+        vetor2[contador].append(randint(1,100))       
+        vetor3[contador].append(randint(1,100))                                                     
+        vetor4[contador].append(randint(1,100))                                               
+        vetor5[contador].append(randint(1,100))                                                          
+        vetor6[contador].append(randint(1,100))                                                 
+        vetor7[contador].append(randint(1,100))                           
+        vetor8[contador].append(randint(1,100))                                              
+        vetor9[contador].append(randint(1,100))                                                                     
+        vetor10[contador].append(randint(1,100))
+             
+contador = 0 
+while contador<10:   
+    
+    lista_max.append(max(vetor1[contador]))
+    lista_min.append(min(vetor1[contador]))    
+    
+    lista_max.append(max(vetor2[contador]))
+    lista_min.append(min(vetor2[contador]))
+    
+    lista_max.append(max(vetor3[contador]))
+    lista_min.append(min(vetor3[contador]))
+    
+    lista_max.append(max(vetor4[contador]))
+    lista_min.append(min(vetor4[contador]))
+    
+    lista_max.append(max(vetor5[contador]))
+    lista_min.append(min(vetor5[contador])) 
+    
+    lista_max.append(max(vetor6[contador]))
+    lista_min.append(min(vetor6[contador])) 
+    
+    lista_max.append(max(vetor7[contador]))
+    lista_min.append(min(vetor7[contador]))
+    
+    lista_max.append(max(vetor8[contador]))
+    lista_min.append(min(vetor8[contador]))                
+                         
+    lista_max.append(max(vetor9[contador]))
+    lista_min.append(min(vetor9[contador]))
+    
+    lista_max.append(max(vetor10[contador]))
+    lista_min.append(min(vetor10[contador]))  
+    
+    contador = contador + 1
+                                
+print('A questão pode ter duas interpretações, que são : valores maximo e minimos de cada lista, ou seja, 100 max e 100 min')
+print("Ou a questão pede o valor maximo e minimo entre o total ve lista1")
+print()
+
+
+print(f"Os valores maximos de cada lista são {lista_max}")
+print()
+print(f"Os valores minimos de cada lista são {lista_min}")
+print()
+
+print(f"O maior valor entre todas as listas é : {max(lista_max)}")
+print()
+print(f"O menor valor entre todas as listas é: {min(lista_min)}")
+
+print()
+
+print(vetor)
+      
