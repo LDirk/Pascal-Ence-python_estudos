@@ -1,0 +1,27 @@
+"""Faça uma função que dada uma lista numérica faz uma soma de todos os números pares e
+outra soma de todos os números ímpares. Ao final, é exibido o somatório dos números pares e
+dos números impares e qual o somatório maior"""
+
+def somatorios(lista):
+    soma_par = 0
+    soma_impar = 0
+    maior = ""
+    
+    for elemento in lista:
+        if (elemento%2)==0 :
+            soma_par = soma_par + elemento
+        else:
+            soma_impar = soma_impar + elemento
+    
+    if soma_par > soma_impar:
+        maior = maior + "O maior entre os dois é a  soma dos pares "
+        
+    elif soma_par < soma_impar:
+        maior = maior + "O maior entre os dois é a soma dos ímpares"
+     
+    else:
+        maior = maior + "Ambas as somas são iguais"
+        
+    return (f"a soma dos pares é: {soma_par}, a soma dos impares é: {soma_impar}, O maior entre eles é : {maior}")
+
+print(somatorios([1,2,1]))
