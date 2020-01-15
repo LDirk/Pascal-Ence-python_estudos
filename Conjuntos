@@ -1,0 +1,19 @@
+# Conjuntos, representam coleções desordenas de elementos únicos.
+## set() cria o conjunto.
+# Não suporta indexação
+
+s1 = set()
+s.add(10) #adicionando o elemento 10.
+s2 = {10,20}
+
+# uniao.
+uniao = s1.union(s2)
+
+# interseção.
+inter = s1.intersection(s2)
+
+# diferença.
+diff = s1.difference(s2)
+
+# tirando elementos repetidos de uma lista.
+s = set(lista)
