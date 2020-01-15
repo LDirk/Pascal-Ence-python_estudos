@@ -1,0 +1,7 @@
+# Serve para voce chamar um arquivo que contenha uma função ja pronta.
+# exemplo, voce tem um arquivo chamado testmodulo.py com uma função area_quadrado, para usá-lo no seu novo programa basta seguir os passos
+# a seguir:
+# Precisam ambas estar na mesma pasta, obs: sem por endereço.
+
+import testmodulo
+print(testmodulo.area_quadradro(5))
