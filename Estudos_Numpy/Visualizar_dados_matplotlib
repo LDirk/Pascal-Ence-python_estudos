@@ -1,0 +1,24 @@
+import numpy as np
+
+import matplotlib.pyplot as plt
+%matplotlib inline #jupy noteb
+
+
+
+salario = np.array([100,200,300,500,800])
+plt.plot(salario)
+
+
+
+#Mudando cor da linha
+plt.plot(salario, c = 'Black')
+
+#Mudando a forma da linha
+plt.plot(salario, c = 'Black', Is = '--')
+
+#Marcardor
+plt.plot(salario, Is = '--', marker = 's')
+
+#Aumentar a marcação
+plt.plot(salario, c = 'Black', Is = '--', marker = 's',ms =18 )
+plt.show()
