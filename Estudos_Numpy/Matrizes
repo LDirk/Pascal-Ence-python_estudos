@@ -1,0 +1,37 @@
+import numpy as np
+
+
+
+#Matrizes
+mat = [[5,4,7],[0,3,4],[0,0,6]]
+for linha in mat:
+    print(linha)
+#Acessando elementos, exemplo 2 linha e 2 coluna
+print(mat[1][1])
+
+
+#Matrizes com numpy
+joao_pts = [20,30,40,15]
+pedro_pts = [100,24,48,23]
+maria_pts = [99,22,34,12]
+marcos_pts = [12,31,12,43]
+
+#Criando a matriz
+pontos = np.array([joao_pts, pedro_pts, maria_pts, marcos_pts])
+print(pontos)
+
+#Acessar linha, exemplo: linha 1
+print(pontos[0])
+
+#Acessa elemento, exemplo : 2l e 2c
+print(pontos[1][0])
+
+#Criando um array de 0 a n 
+my_data = np.arange(0,20)
+print(my_data)
+
+
+#Criando uma matriz m x n com os array, ex : dimensao 5 x4 
+mat1 = np.reshape(my_data, (5,4))
+print(mat1)
+
