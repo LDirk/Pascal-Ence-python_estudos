@@ -1,0 +1,12 @@
+%matplotlib inline
+import matplotlib.pyplot as plt
+import numpy as np 
+import pandas as pd 
+
+
+#Vai gerar uma lista no intervalo que voce der, (inicial, final, partes)
+x = np.linspace(1,10,100)
+print(x)
+
+#exibir o gráfico, vai gerar os senos de x 
+print(plt.plot(x, np.sin(x)))
