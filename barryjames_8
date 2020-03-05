@@ -1,0 +1,41 @@
+  soma = dado_1 + dado_2 
+
+#Vence na primeira jogada se tirar 7 ou 11 
+
+  if soma == 7 or soma == 11:
+    vitoria = vitoria + 1
+    numero_jogos = numero_jogos + 1 
+    break 
+
+#Perde se tirar 2,3 ou 12
+  elif soma == 2 or soma == 3 or soma == 12:
+    derrota = derrota + 1 
+    numero_jogos = numero_jogos + 1 
+    break 
+  
+
+  else: 
+
+    verificador = 0 
+    dado_1_novo = randint(1,6)
+    dado_2_novo = randint(1,6)
+    soma_nova = dado_1_novo + dado_2_novo 
+
+
+
+    while verificador == 0: 
+
+      if soma_nova == soma:
+        
+        vitoria = vitoria + 1
+        verificador = verificador + 1 
+        numero_jogos = numero_jogos + 1
+        
+     elif soma_nova == 7: 
+
+       derrota = derrota + 1 
+       verifiador = verificador + 1 
+       numero_jogos = numero_jogos + 1 
+
+      else: 
+        continue 
