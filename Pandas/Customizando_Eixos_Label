@@ -1,0 +1,20 @@
+%matplotlib inline
+import pandas as pd
+import matplotlib.pyplot as plt 
+
+
+df = pd.read_csv("original.csv")
+df.fillna(0, inplace = True) #Onde estiver NaN vai ser trocado para 0
+df.head()
+
+
+
+#Gráfico da relação entre os anos com o total de crimes e pessoas envolvidas.
+
+fig, ax = plt.subplots()
+ax.plot(df['Year'], df['crimes.total'], '-r') #red 
+ax.plot(df['Year'], df['crimes.person'], '-b') #Blue
+ax.set_ylabel("Quantity")
+ax.set_xlabel("Year")
+ax.set_title("Crimes: Total x Person")
+ax.set_xlim([df['Year'].min(), df['Year'].max()])
