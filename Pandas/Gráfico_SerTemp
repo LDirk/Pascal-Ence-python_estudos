@@ -1,0 +1,59 @@
+%matplotlib inline 
+import pandas as pd 
+import matplotlib.pyplot as plt 
+import matplotlib.dates as dates 
+import datetime as dt 
+
+#Vamos trabalhar com  a visualização de paginas ao longo de um dia
+
+#Número de visualização no python para zumbis
+df = pd.read_csv('ppz-jan-fev-2017.csv')
+
+#0 seria a meia noite do dia 1 de janeiro, precisamos por em padrão data.
+#Converter para hora
+
+def to_date(value):
+    return dt.datetime(2017,1,1) + dt.timedelta(hours = value)
+df['date'] = df['hour'].apply(to_date)
+
+#Removendo a coluna desnecessaria(hora)
+del df['hour']
+
+#Fazendo a coluna date ser um indice
+df.set_index(['date'], inplace = True)
+df.head()
+
+
+#Começando a criar o gráfico
+fig , ax = plt.subplots()
+
+#Eixo X
+ax.plot_date(df.index.to_pydatetime(), df['views'], 'b-') #Convertendo para o pydatetime no eixo x
+ax.xaxis.set_minor_locator(dates.DayLocator(bymonthday=range(5,32,5))) #Controla os intervalos do eixo x
+ax.xaxis.set_minor_formatter(dates.DateFormatter('%d')) #%d é o dia do mes cm duas casas decimais
+ax.xaxis.grid(True, which = 'minor')
+
+#Eixo Y
+ax.yaxis.grid()
+
+ax.xaxis.set_major_locator(dates.MonthLocator())
+ax.xaxis.set_major_formatter(dates.DateFormatter('%b')) # Mes com 3 caract
+
+plt.tight_layout()
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
