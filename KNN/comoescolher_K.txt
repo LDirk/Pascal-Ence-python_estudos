@@ -1,0 +1,9 @@
+#Se k for muito pequeno, a classificação fica sensivel a pontos de ruido.
+
+#Se k é muito grande, a vizinhança pode incluir elementos de outras classes.
+
+#Além disso, é necessário sempre escolher um valor ímpar para K, assim se evita empates na votação.
+
+#Tomar cuidado com outlier. 
+
+#Um teste para o K , k = sqrt(n)
