@@ -1,0 +1,25 @@
+#Primeira coluna, class Name: (1,2,3) = (L,B,R)
+# DataSet : https://archive.ics.uci.edu/ml/datasets/Balance+Scale
+import numpy as np
+
+# x são as entradas e y as saidas(Rotulos)
+x = np.genfromtxt("dataset.data", delimiter = ",", usecols=(1,2,3,4))
+y = np.genfromtxt("dataset.data", delimiter = ",", usecols=(0))
+
+from sklearn.model_selection import train_test_split
+
+x_treino, x_teste, y_treino, y_teste = train_test_split(x,y,test_size=0.3,random_state=42)
+
+from sklearn.neighbors import KNeighborsClassifier
+
+#n_neighbors = K, p=2 eucli
+knn = KNeighborsClassifier(n_neighbors=17, p=2)
+#treinar
+knn.fit(x_treino, y_treino)
+#Obtendo os labels da classificação
+labels = knn.predict(x_teste)
+
+#Labels originais, comparar os dois:
+np.sum(labels == y_teste)
+
+100*(labels== y_teste).sum()/len(x_teste)
