@@ -1,0 +1,13 @@
+from time import localtime
+from pygame import mixer 
+
+H = input("Coloque a hora:")
+M = input("Coloque o minuto: ")
+
+while True:
+	if localtime().tm_hour == int(H) and localtime().tm_min == int(M):
+		print("Acorde")
+		mixer.init()
+		mixer.music.load("musica.mpeg")
+		mixer.music.play()
+		break 
