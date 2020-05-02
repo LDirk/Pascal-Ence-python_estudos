@@ -1,0 +1,14 @@
+#Jypter noot
+import numpy as np 
+from sklearn import neighbors, datasets 
+
+iris = datasets.load_iris()
+
+x = iris.data
+y = iris.target #saidas
+
+knn = neighbors.KNeighborsClassifier(n_neighbors=3)
+knn.fit(x,y)
+knn.predict(x)
+acuracia = knn.score(x, y)
+acuracia
